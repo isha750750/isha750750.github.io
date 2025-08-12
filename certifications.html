@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Certifications</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link your main CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    body {
+      background-color: #0a0f1c;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .certification-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 3rem;
+      color: #0ff;
+    }
+
+    .certification-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .cert-card {
+      background-color: #10172b;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 20px rgba(0,255,255,0.1);
+    }
+
+    .cert-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+    }
+
+    .cert-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 2px solid #0ff;
+    }
+
+    .cert-content {
+      padding: 20px;
+    }
+
+    .cert-content h2 {
+      margin: 0;
+      font-size: 1.4rem;
+      color: #ffffff;
+    }
+
+    .cert-content p {
+      font-size: 0.9rem;
+      color: #cfcfcf;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="certification-container">
+    <h1 data-aos="fade-down">My Certifications</h1><br>
+    
+    <div class="certification-grid">
+      <!-- Certification Card 1 -->
+      <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+        <img class="cert-image" src="assets/cert1.jpg" alt="Certificate 1">
+        <div class="cert-content">
+          <h2>Power BI for Data Visualization</h2>
+          <p>Completed a hands-on certification focused on transforming raw data into interactive dashboards and compelling business insights using Microsoft Power BI. Gained practical experience in DAX, Power Query, data modeling, and real-time reporting. Capable of connecting diverse data sources, building intuitive reports, and delivering data-driven decisions in a business context.</p>
+        </div>
+      </div>
+
+      <!-- Certification Card 2 -->
+      <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+        <img class="cert-image" src="assets\cert1.jpg" alt="Certificate 2">
+        <div class="cert-content">
+          <h2>Software Acceleration Program</h2>
+          <p>Successfully completed an intensive 6-month Software Acceleration Program designed to fast-track industry readiness. Covered real-world projects and advanced training in Python, SQL, Data Structures, Algorithms, OOP, APIs, Web Development, and Deployment. Built strong foundations in full-stack engineering and software lifecycle while collaborating on capstone projects simulating real tech environments.</p>
+        </div>
+      </div>
+
+      <!-- Certification Card 3 -->
+      <div class="cert-card" data-aos="fade-up" data-aos-delay="300">
+        <img class="cert-image" src="assets/cert3.jpg" alt="Certificate 3">
+        <div class="cert-content">
+          <h2>SQL for Data Management</h2>
+          <p>Completed a focused SQL training covering relational database design, advanced query writing, joins, subqueries, indexing, and data manipulation using MySQL and PostgreSQL. Gained hands-on experience in extracting, analyzing, and managing structured data — essential for backend systems, analytics pipelines, and data-driven decision making.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1200 });
+  </script>
+</body>
+</html>

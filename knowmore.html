@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Know More - Isha Khadke</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #0f0f1b;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .gallery-item {
+      background: #1a1a2e;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #0ff;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .gallery-item h3 {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #0ff;
+    }
+
+    .gallery-item p {
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1> My Gaming Projects & Designs</h1><br>
+  
+
+  <div class="gallery">
+    <!-- Project 1 -->
+    <div class="gallery-item">
+      <img src="assets/gaming1.jpg" alt="Game Project 1" />
+      <h3>Snake Game in Java</h3>
+      <p>A classic snake game with colorful UI built using Java Swing.</p>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="gallery-item">
+      <img src="assets/gaming2.jpg" alt="Game Project 2" />
+      <h3>Space Shooter in Python</h3>
+      <p>Built using Pygame — smooth movement, lasers, and power-ups!</p>
+    </div>
+
+    <!-- Logo 1 -->
+    <div class="gallery-item">
+      <img src="assets/logo1.png" alt="Logo Design" />
+      <h3>Neon Tech Logo</h3>
+      <p>Created for a fictional AI product using Figma + Illustrator.</p>
+    </div>
+
+    <!-- Banner -->
+    <div class="gallery-item">
+      <img src="assets/banner1.jpg" alt="Banner Design" />
+      <h3>Event Banner</h3>
+      <p>Designed for a virtual tech fest with 3D effects and vibrant layers.</p>
+    </div>
+
+    <!-- Add more below as needed -->
+  </div>
+
+</body>
+</html>
