@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Projects</title>
+  <style>
+    body {
+      background-color: #001638;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+    }
+
+    .project {
+      background: #102442;
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 20px rgba(90, 197, 247, 0.05);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      background: linear-gradient(to right, #4e8baa, #262729);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #4feaf5;
+    }
+  </style>
+</head>
+<body>
+  <h2>My GitHub Projects</h2>
+  <div id="projects-container">Loading your projects...</div>
+
+  <script>
+    const GITHUB_USERNAME = "isha750750"; // ✅ Your GitHub username
+
+    fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos`)
+      .then(res => res.json())
+      .then(repos => {
+        const container = document.getElementById("projects-container");
+        container.innerHTML = "";
+        repos.forEach(repo => {
+          const div = document.createElement("div");
+          div.classList.add("project");
+          div.innerHTML = `
+            <h3>${repo.name}</h3>
+            <p>${repo.description || "No description available."}</p>
+            <a href="${repo.html_url}" target="_blank" style="color:#4feaf5;">View on GitHub</a>
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch(err => {
+        document.getElementById("projects-container").innerHTML = "Failed to load projects.";
+      });
+  </script>
+</body>
+</html>
